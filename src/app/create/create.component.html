@@ -1,0 +1,37 @@
+<mat-card>
+    <form (submit)="onAddMovie(movieForm)" #movieForm="ngForm">
+      <mat-form-field>
+          <label> Movie Title</label>
+        <input
+          matInput
+          type="text"
+          name="title"
+          ngModel
+          required
+          #title="ngModel">
+      </mat-form-field>
+      <mat-form-field>
+          <label>Movie Year</label>
+        <textarea
+          matInput
+          name="year"
+          ngModel
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+          <label>Movie Poster</label>
+        <textarea
+          matInput
+         rows="4"
+          name="poster"
+          ngModel
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="accent"
+        type="submit">Save Movie</button>
+    </form>
+  </mat-card>
